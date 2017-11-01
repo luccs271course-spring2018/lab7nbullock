@@ -22,16 +22,23 @@ public class ReverseLines {
     final Scanner input = new Scanner(System.in);
     printReverse(input);
   }
+
   private static void printReverse(final Scanner input) {
-  // TODO recursively read and print successive input lines until EOF, then print them out in reverse order
-   while ((line = input.nextLine()) != null) {
-      if (line = null){
+    // DONE recursively read and print successive input lines until EOF, then print them out in
+    // reverse order
+    String line;
+    LinkedStack<String> newStack = new LinkedStack<String>();
+    while ((line = input.nextLine()) != null) {
+      if ((line == "") || (line == null)) {
         break;
       } else {
-        newStack.push(input);
+        newStack.push(line);
         System.out.println("Push Executed");
         printReverse(input);
       }
     }
-  }        
+    while (!newStack.isEmpty()) {
+      System.out.println(newStack.pop());
+    }
+  }
 }
