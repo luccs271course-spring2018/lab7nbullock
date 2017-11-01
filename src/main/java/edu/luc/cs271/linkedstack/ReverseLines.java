@@ -19,6 +19,7 @@ public class ReverseLines {
       System.out.println(lineStack.peek());
       lineStack.pop();
     }*/
+    System.out.println("ReversedLines Executed");
     final Scanner input = new Scanner(System.in);
     printReverse(input);
   }
@@ -29,7 +30,7 @@ public class ReverseLines {
     String line;
     LinkedStack<String> newStack = new LinkedStack<String>();
     while ((line = input.nextLine()) != null) {
-      if ((line == "") || (line == null)) {
+      if (line == null) {
         break;
       } else {
         newStack.push(line);
