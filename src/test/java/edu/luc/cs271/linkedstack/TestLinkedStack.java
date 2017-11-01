@@ -2,6 +2,7 @@ package edu.luc.cs271.linkedstack;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 import org.junit.After;
@@ -79,7 +80,7 @@ public class TestLinkedStack {
     fixture.push(value2);
     final List<String> list = fixture.asList();
     assertEquals(2, list.size());
-    // assertEquals(Arrays.asList(value2, value1), list);
+    assertEquals(Arrays.asList(value2, value1), list);
     final List<String> list2 = fixture.asList();
     assertEquals(2, list2.size());
   }
@@ -97,7 +98,7 @@ public class TestLinkedStack {
     fixture.push(value2);
     final List<String> list = fixture.asFifoList();
     assertEquals(2, list.size());
-    // assertEquals(Arrays.asList(value1, value2), list);
+    assertEquals(Arrays.asList(value1, value2), list);
     final List<String> list2 = fixture.asFifoList();
     assertEquals(2, list2.size());
   }
