@@ -24,5 +24,14 @@ public class ReverseLines {
   }
   private static void printReverse(final Scanner input) {
   // TODO recursively read and print successive input lines until EOF, then print them out in reverse order
+   while ((line = input.nextLine()) != null) {
+      if (line = null){
+        break;
+      } else {
+        newStack.push(input);
+        System.out.println("Push Executed");
+        printReverse(input);
+      }
+    }
   }        
 }

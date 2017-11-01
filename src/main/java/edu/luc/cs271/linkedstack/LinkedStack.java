@@ -11,7 +11,7 @@ public class LinkedStack<E> implements IStack<E> {
   
   public int size = 0;
 
-  // TODO why don't we need an explicit constructor?
+  // DONE why don't we need an explicit constructor?
 
   @Override
   public E push(final E obj) {
