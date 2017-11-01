@@ -10,7 +10,7 @@ public class LinkedStack<E> implements IStack<E> {
   private Node<E> top;
 
   public int size = 0;
-  // TODO why don't we need an explicit constructor?
+  // DONE why don't we need an explicit constructor?
   // We do not need an explicit constructor because an empty default contructor will be made.
 
   @Override
@@ -49,7 +49,7 @@ public class LinkedStack<E> implements IStack<E> {
 
   @Override
   public boolean isEmpty() {
-    // TODO
+    // DONE
     if (top != null) {
       return false;
     }
@@ -89,7 +89,7 @@ public class LinkedStack<E> implements IStack<E> {
   }
 
   private void populateFifoList(final Node<E> curr, final List<E> result) {
-    // TODO recursively populate the list in the desired order
+    // DONE recursively populate the list in the desired order
     if (curr == null) {
       return;
     } else {
