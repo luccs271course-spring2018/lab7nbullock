@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class ReverseLines {
 
+  static String line;
+  static LinkedStack<String> newStack = new LinkedStack<String>();
+
   public static void main(final String[] args) {
     // DONE read successive input lines until EOF, then print out in reverse order
 
@@ -27,8 +30,7 @@ public class ReverseLines {
   private static void printReverse(final Scanner input) {
     // DONE recursively read and print successive input lines until EOF, then print them out in
     // reverse order
-    String line;
-    LinkedStack<String> newStack = new LinkedStack<String>();
+
     while ((line = input.nextLine()) != null) {
       if (line.equals("")) {
         break;
