@@ -30,11 +30,11 @@ public class ReverseLines {
     String line;
     LinkedStack<String> newStack = new LinkedStack<String>();
     while ((line = input.nextLine()) != null) {
-      if (line == null) {
+      if (line.equals("")) {
         break;
       } else {
         newStack.push(line);
-        System.out.println("Push Executed");
+        System.out.println(line);
         printReverse(input);
       }
     }
